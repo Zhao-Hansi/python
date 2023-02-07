@@ -19,6 +19,8 @@ class Clock(object):
     def run(self):
         """走字"""
         self._second += 1
+        if self._hour >=24 or self._minute > 60 or self._second >60:
+            print('error')
         if self._second == 60:
             self._second = 0
             self._minute += 1
@@ -42,7 +44,6 @@ def main():
     clock = Clock(23, 59, 58)
     while True:
         print(clock.show())
-        clear_console()
         sleep(1)
         clock.run()
 
