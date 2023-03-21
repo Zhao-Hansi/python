@@ -1,156 +1,73 @@
 import turtle
 
-# 绘制佩奇的头
-turtle.color("pink")
-turtle.begin_fill()
-turtle.circle(100)
-turtle.end_fill()
+# Move the Turtle to (x, y)
+def goto(x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
 
-# 绘制佩奇的耳朵
-turtle.penup()
-turtle.goto(-70, 170)
-turtle.pendown()
-turtle.color("lightpink")
-turtle.begin_fill()
-turtle.circle(30)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(70, 170)
-turtle.pendown()
-turtle.begin_fill()
-turtle.circle(30)
-turtle.end_fill()
+# Draw a circle with radius r and color c
+def circle(r, c):
+    turtle.fillcolor(c)
+    turtle.begin_fill()
+    turtle.circle(r)
+    turtle.end_fill()
 
-# 绘制佩奇的眼睛
-turtle.color("white")
-turtle.penup()
-turtle.goto(-40, 220)
-turtle.pendown()
-turtle.begin_fill()
-turtle.circle(15)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(40, 220)
-turtle.pendown()
-turtle.begin_fill()
-turtle.circle(15)
-turtle.end_fill()
-turtle.color("black")
-turtle.penup()
-turtle.goto(-40, 220)
-turtle.pendown()
-turtle.begin_fill()
-turtle.circle(6)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(40, 220)
-turtle.pendown()
-turtle.begin_fill()
-turtle.circle(6)
-turtle.end_fill()
+# Draw a rectangle with width w, height h and color c
+def rectangle(w, h, c):
+    turtle.fillcolor(c)
+    turtle.begin_fill()
+    for i in range(2):
+        turtle.fd(w)
+        turtle.left(90)
+        turtle.fd(h)
+        turtle.left(90)
+    turtle.end_fill()
 
-# 绘制佩奇的鼻子
-turtle.color("pink")
-turtle.penup()
-turtle.goto(0, 180)
-turtle.pendown()
-turtle.begin_fill()
-turtle.circle(20)
-turtle.end_fill()
+# Draw Peppa Pig
+def peppa():
+    # Face
+    goto(0, -100)
+    circle(100, "#F0C8B7")  # Pink
+    circle(25, "#F57F71")  # Red
+    goto(-20, 50)
+    circle(20, "#FFFFFF")  # White
+    goto(20, 50)
+    circle(15, "#FFFFFF")  # White
+    # Ears
+    goto(-60, 110)
+    circle(20, "#F0C8B7")  # Pink
+    goto(60, 110)
+    circle(20, "#F0C8B7")  # Pink
+    # Eyes
+    goto(-25, 25)
+    circle(10, "#000000")  # Black
+    goto(25, 25)
+    circle(10, "#000000")  # Black
+    # Nose
+    goto(0, 10)
+    circle(7, "#000000")  # Black
+    # Mouth
+    goto(-30, -20)
+    turtle.pencolor("#000000")  # Black
+    turtle.pensize(10)
+    turtle.right(45)
+    turtle.fd(40)
+    # Body
+    turtle.pensize(1)
+    goto(-100, -100)
+    rectangle(200, 100, "#F0C8B7")  # Pink
+    # Legs
+    goto(-70, -150)
+    rectangle(40, 100, "#F0C8B7")  # Pink
+    goto(30, -150)
+    rectangle(40, 100, "#F0C8B7")  # Pink
+    # Shoes
+    goto(-80, -200)
+    rectangle(20, 50, "#000000")  # Black
+    goto(40, -200)
+    rectangle(20, 50, "#000000")  # Black
 
-# 绘制佩奇的嘴巴
-turtle.color("red")
-turtle.penup()
-turtle.goto(-50, 150)
-turtle.pendown()
-turtle.pensize(5)
-turtle.right(45)
-turtle.circle(60, 90)
-turtle.penup()
-turtle.goto(-50, 150)
-turtle.pendown()
-turtle.left(90)
-turtle.circle(60, 90)
-
-# 绘制佩奇的身体
-turtle.color("pink")
-turtle.penup()
-turtle.goto(-150, -50)
-turtle.pendown()
-turtle.begin_fill()
-turtle.forward(300)
-turtle.right(90)
-turtle.circle(150, 180)
-turtle.right(90)
-turtle.forward(300)
-turtle.end_fill()
-
-# 绘制佩奇的手臂
-turtle.color("lightpink")
-turtle.penup()
-turtle.goto(-180, 80)
-turtle.pendown()
-turtle.begin_fill()
-turtle.right(45)
-turtle.circle(40, 90)
-turtle.right(45)
-turtle.forward(70)
-turtle.right(135)
-turtle.circle(40, 90)
-turtle.right(45)
-turtle.forward(70)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(180, 80)
-turtle.pendown()
-turtle.begin_fill()
-turtle.right(180)
-turtle.right(45)
-turtle.circle(-40, 90)
-turtle.right(45)
-turtle.forward(70)
-turtle.right(135)
-turtle.circle(-40, 90)
-turtle.right(45)
-turtle.forward(70)
-turtle.end_fill()
-
-# 绘制佩奇的腿
-turtle.color("lightpink")
-turtle.penup()
-turtle.goto(-100, -200)
-turtle.pendown()
-turtle.begin_fill()
-turtle.right(45)
-turtle.forward(100)
-turtle.right(90)
-turtle.forward(100)
-turtle.right(45)
-turtle.forward(70)
-turtle.right(45)
-turtle.forward(100)
-turtle.right(90)
-turtle.forward(100)
-turtle.right(45)
-turtle.forward(100)
-turtle.end_fill()
-turtle.penup()
-turtle.goto(100, -200)
-turtle.pendown()
-turtle.begin_fill()
-turtle.right(180)
-turtle.right(45)
-turtle.forward(-100)
-turtle.right(90)
-turtle.forward(-100)
-turtle.right(45)
-turtle.forward(-70)
-turtle.right(45)
-turtle.forward(-100)
-turtle.right(90)
-turtle.forward(-100)
-turtle.right(45)
-turtle.forward(-100)
-turtle.end_fill()
+peppa()
 
 turtle.done()
