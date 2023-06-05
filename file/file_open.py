@@ -19,7 +19,7 @@ def main():
 def main1():
     f = None
     try:
-        f = open('/Users/zhaozexin/PycharmProjects/python/100个数求和.py', encoding= 'utf-00')
+        f = open('/practice/100个数求和.py', encoding='utf-00')
         print(f.read())
     except FileNotFoundError:
         print('cannot open file')
@@ -32,11 +32,11 @@ def main1():
             f.close()
 
 def main2():
-    with open('/Users/zhaozexin/PycharmProjects/python/100个数求和.py', mode= 'r') as f:
+    with open('/practice/100个数求和.py', mode='r') as f:
         for line in f:
             print(line)
     print('-------------------------')
-    with open('/Users/zhaozexin/PycharmProjects/python/100个数求和.py', mode= 'r') as f1:
+    with open('/practice/100个数求和.py', mode='r') as f1:
         print(f1.readline())
 
 if __name__ == '__main__':

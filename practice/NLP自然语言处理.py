@@ -28,7 +28,7 @@ def parse(text):
     return sorted_word_cnt
 
 
-with open('file/in.txt', 'r') as fin:
+with open('../file/in.txt', 'r') as fin:
     text = fin.read()
 
 word_and_freq = parse(text)
