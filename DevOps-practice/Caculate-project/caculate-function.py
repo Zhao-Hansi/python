@@ -16,10 +16,10 @@ def division_method(number_a, number_b):
 
 if __name__ == '__main__':
     while True:
+        number1 = input('pls input the first number you want to calculate:')
+        calculate_type = input('pls input the calculate type:')
+        number2 = input('pls input the second number you want to calculate:')
         try:
-            number1 = input('pls input the first number you want to calculate:')
-            calculate_type = input('pls input the calculate type:')
-            number2 = input('pls input the second number you want to calculate:')
             number1 = float(number1)
             number2 = float(number2)
             if calculate_type == '+':
