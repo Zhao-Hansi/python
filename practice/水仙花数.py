@@ -7,3 +7,22 @@ for i in range(100, 1000):
     # print(low, mid,high)
     if i == low ** 3 + mid ** 3 + high ** 3:
         print(i)
+
+import math
+
+print(math.sqrt(100))
+
+S = "abbaca"
+stack = []
+for s in S:
+    if stack and s == stack[-1]:
+        stack.pop()
+    else:
+        stack.append(s)
+print(stack)
+
+
+def chicken_rabbit(n, m):
+    x = (n - 2 * m) // 2
+    y = m - x
+    return x, y
