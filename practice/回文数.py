@@ -7,4 +7,4 @@ def is_palindrome(num):
     return total == num
 
 
-print(is_palindrome(11511))
+print(is_palindrome(123321))
